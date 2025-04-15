@@ -1,22 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel 12</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-    {{-- fontawesome --}}
-    {{-- tipografia --}}
-</head>
-<body>
+@section('title') Laravel 12 | Posts @endsection
+@push('css')
+    <style>
+        body {
+            color: cyan;
+        }
+    </style>
+@endpush
+
+@push('css')
+    <style>
+        body {
+            background-color: darkslategray;
+        }
+    </style>
+@endpush
+
+<x-app-layout>
 
     <header></header>
 
     <h1>Aqui se visualizan todas las publicaciones</h1>
 
+    <a href="/posts/create">Crear Publicación</a>
+
+    <ul>
+        @foreach ($posts as $post)
+            <li>
+                <a href="/posts/{{$post->id}}">
+                    {{ $post->title }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
+
     <footer></footer>
     
-</body>
-</html>
+</x-app-layout>
