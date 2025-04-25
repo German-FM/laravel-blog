@@ -22,7 +22,7 @@
             <x-slot name="title">
                 ¡Alerta!
             </x-slot>
-            Contenido de la alerta
+            Contenido de la alerta aaa
         </x-alert>
 
         <p>Hola mundo</p>
