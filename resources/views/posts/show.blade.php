@@ -14,9 +14,10 @@
         }
     </style>
 @endpush
+ 
 
 <x-app-layout>
-    <a href="/posts">Regresar</a>
+    <a href="{{route('posts.index')}}">Regresar</a>
    
     <h1>{{$post->title}}</h1>
 
@@ -28,6 +29,10 @@
         <b>Contenido:</b> {{$post->content}}   
     </p>
 
-    <a href="/posts/{{$post->id}}/edit">Editar</a>
+    <a href="{{route('posts.edit', $post)}}">Editar</a>
+    <form action="{{route('posts.destroy', $post)}}" method="POST" style="display: inline-block;">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="cursor-pointer">Eliminar</button>
 
 </x-app-layout>

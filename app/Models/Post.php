@@ -15,12 +15,23 @@ class Post extends Model
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'title',
-        'content',
-        'category',
-        'published_at',
+    // protected $fillable = [
+    //     'title',
+    //     'slug',
+    //     'content',
+    //     'category',
+    //     'published_at',
+    // ];
+    protected $guarded = [
+        'is_active',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
+
+
 
 

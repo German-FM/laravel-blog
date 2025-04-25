@@ -26,5 +26,7 @@
         </x-alert>
 
         <p>Hola mundo</p>
+
+        <a href="{{route('posts.index')}}" class="text-blue-500 hover:text-blue-700">Ver publicaciones</a>
     </div>
 </x-app-layout>

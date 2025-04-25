@@ -21,18 +21,20 @@
 
     <h1>Aqui se visualizan todas las publicaciones</h1>
 
-    <a href="/posts/create">Crear Publicación</a>
+    <a href="{{route('posts.create')}}">Crear Publicación</a>
 
     <ul>
         @foreach ($posts as $post)
             <li>
-                <a href="/posts/{{$post->id}}">
+                <a href="{{route('posts.show', $post)}}">
                     {{ $post->title }}
                 </a>
             </li>
         @endforeach
     </ul>
 
-    <footer></footer>
+    {{ $posts->links() }}
+
+    <footer> <a href="/">Regresar</a> </footer>
     
 </x-app-layout>
