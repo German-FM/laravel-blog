@@ -27,6 +27,6 @@
 
         <p>Hola mundo</p>
 
-        <a href="{{route('posts.index')}}" class="text-blue-500 hover:text-blue-700">Ver publicaciones</a>
+        <a href="{{route('books.index')}}" class="text-blue-500 hover:text-blue-700">Ver libros</a>
     </div>
 </x-app-layout>

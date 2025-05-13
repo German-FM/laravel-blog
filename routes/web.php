@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\BookController;
 
 Route::get('/', HomeController::class);
 
@@ -20,6 +21,6 @@ Route::get('/', HomeController::class);
 
 // Route::delete('/posts/{post}', [PostController::class, 'destroy']) -> name('posts.destroy');
 
-Route::resource('posts', PostController::class);
+Route::resource('books', BookController::class);
     // ->parameters(['articulos' => 'post'])
     // ->names('posts');

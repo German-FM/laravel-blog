@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePostRequest extends FormRequest
+class StoreBookRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,10 +23,17 @@ class StorePostRequest extends FormRequest
     {
         return [
 
-            'title' => ['required', 'min:1', 'max:255'],
-            'slug' => "required|unique:posts,slug,{$this->post->id}",
-            'content' => 'required',
-            'category' => 'required',
+            'titulo' => ['required', 'min:1', 'max:255'],
+            'slug' => "required|unique:books,slug,{$this->book->id}",
+            'autor' => 'required',
+            'editorial' => 'required',
+            'lugar' => 'required',
+            'fecha' => 'required',
+            'n_ejemplar' => 'required',
+            'fecha_ingreso' => 'required',
+            'observaciones' => 'required',
+            'cou' => 'required',
+
         ];
     }
     // public function messages()
