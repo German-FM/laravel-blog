@@ -19,7 +19,7 @@ class BookController extends Controller
                   ->orWhere('autor', 'like', "%{$query}%");
             })
             ->orderBy('id', 'desc')
-            ->paginate(10);
+            ->paginate(12);
 
         if ($request->ajax()) {
             return view('books.partials.book-cards', compact('books'))->render();
