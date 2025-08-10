@@ -1,101 +1,114 @@
 @section('title') Laravel 12 | Editar @endsection
 
 @push('css')
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #CAD5E2;
+        color: #0E2167;
+        margin: 0;
+        padding: 0;
+    }
 
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        background-color: #0E2167;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: #007bff;
-        }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #0E2167;
+    }
 
-        .form-container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
+    .form-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        border-top: 6px solid #1F49E0;
+    }
 
-        .form-container label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #007bff;
-        }
+    .form-container label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #0E2167;
+    }
 
-        .form-container input, .form-container textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+    .form-container input,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #CAD5E2;
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+    }
 
-        .form-container button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+    .form-container input:focus,
+    .form-container textarea:focus {
+        border-color: #1F49E0;
+        outline: none;
+        box-shadow: 0 0 5px rgba(31, 73, 224, 0.3);
+    }
 
-        .form-container button:hover {
-            background-color: #218838;
-        }
+    .form-container button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #1F49E0;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.2s ease-in-out;
+    }
 
-        .form-container a {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            color: #007bff;
-            text-decoration: none;
-        }
+    .form-container button:hover {
+        background-color: #0E2167;
+    }
 
-        .form-container a:hover {
-            text-decoration: underline;
-        }
+    .form-container a {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        color: #0E2167;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-        .alert {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            border-radius: 5px;
-        }
+    .form-container a:hover {
+        color: #1F49E0;
+        text-decoration: underline;
+    }
 
-        .alert h2 {
-            margin: 0 0 10px;
-        }
+    .alert {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        border-radius: 6px;
+    }
 
-        .alert ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-    </style>
+    .alert h2 {
+        margin: 0 0 10px;
+    }
+
+    .alert ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+</style>
 @endpush
 
 <x-app-layout>
