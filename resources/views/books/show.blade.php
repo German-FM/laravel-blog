@@ -1,76 +1,76 @@
-@section('title') Laravel 12 | {{$book->title}} @endsection
-
 @push('css')
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #CAD5E2;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
 
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        background-color: #0E2167;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: #007bff;
-        }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #0E2167;
+    }
 
-        .book-details {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
+    .book-details {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
 
-        .book-details p {
-            margin: 10px 0;
-            font-size: 16px;
-        }
+    .book-details p {
+        margin: 10px 0;
+        font-size: 16px;
+    }
 
-        .book-details p b {
-            color: #007bff;
-        }
+    .book-details p b {
+        color: #1F49E0;
+    }
 
-        .actions {
-            text-align: center;
-            margin-top: 20px;
-        }
+    .actions {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-        .actions a, .actions button {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-        }
+    .actions a,
+    .actions button {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #1F49E0;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
 
-        .actions a:hover, .actions button:hover {
-            background-color: #0056b3;
-        }
+    .actions a:hover {
+        background-color: #0E2167;
+    }
 
-        .actions button {
-            background-color: #dc3545;
-        }
+    .actions button {
+        background-color: #dc3545;
+    }
 
-        .actions button:hover {
-            background-color: #c82333;
-        }
-    </style>
+    .actions button:hover {
+        background-color: #c82333;
+    }
+</style>
 @endpush
 
 <x-app-layout>
@@ -79,7 +79,7 @@
     </header>
 
     <div class="book-details">
-        <p><b>Titulo:</b> {{$book->titulo}}</p>
+        <p><b>Título:</b> {{$book->titulo}}</p>
         <p><b>Autor:</b> {{$book->autor}}</p>
         <p><b>Editorial:</b> {{$book->editorial}}</p>
         <p><b>Lugar:</b> {{$book->lugar}}</p>
